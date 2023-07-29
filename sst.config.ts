@@ -15,9 +15,9 @@ export default {
       if (!process.env.POSTGRES_PRISMA_URL) {
         throw new Error('process.env.POSTGRES_PRISMA_URL is not defined');
       }
-      
+
       const postgresPrismaUrl = process.env.POSTGRES_PRISMA_URL;
-      
+
       const site = new NextjsSite(stack, 'site', {
         environment: {
           POSTGRES_PRISMA_URL: postgresPrismaUrl,
